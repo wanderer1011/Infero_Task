@@ -1,0 +1,23 @@
+.sample-test .title {
+    font-size: 1.3em;
+    padding: .25em;
+    border-bottom: 1px solid #888;
+    text-transform: lowercase;
+    font-weight: 700;
+}
+.sample-test .input, .sample-test .output {
+    border: 1px solid #888;
+}
+.test-example-line-even {
+    background-color: #e0e0e0;
+}
+.sample-test .cases{
+    line-height: 1.25em;
+    padding: .25em;
+    margin: 0;
+    background-color: #efefef;
+}
+.heading{
+    text-align: center;
+    border-bottom: 1px solid #888;
+}

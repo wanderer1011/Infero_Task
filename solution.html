@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infero Task</title>
+    <link rel="stylesheet" href="./prism.css">
+</head>
+<body>
+    <h2>Note:</h2>
+    <p style="font-size: large;">A greedy approach can also be used to solve this problem. By sorting both the questions array and the applicants array, we can then iterate through each applicant using a for loop and assign them the question rating in ascending order. Although its not efficient compared to the solution provided. Check out the explanation <a href="./explanation.html">here</a>.</p>
+    <!-- Solution Container -->
+    <div id="vscode-solution">
+        <pre><code class="language-cpp">
+            #include &lt;bits/stdc++.h&gt;
+            using namespace std;
+            
+            void solve() {
+                int n;
+                cin >> n;
+                vector&lt;pair&lt;int, int&gt;&gt; applicants(n);
+                vector&lt;int&gt; questions(n);
+            
+                // Reading applicant ratings and storing with original index
+                for (int i = 0; i < n; ++i) {
+                    cin >> applicants[i].first;
+                    applicants[i].second = i;
+                }
+            
+                // Reading question ratings in jumbled order
+                for (int i = 0; i < n; ++i) {
+                    cin >> questions[i];
+                }
+            
+                // Sorting both applicants and questions based on ratings
+                sort(applicants.begin(), applicants.end());
+                sort(questions.begin(), questions.end());
+            
+                // Array to store the matched question index for each applicant
+                vector&lt;int&gt; matches(n);
+            
+                // Matching questions to applicants and storing question ratings directly
+               for (int i = 0; i < n; ++i) {
+                matches[applicants[i].second] = questions[i];   
+               }
+            
+               // Outputting the correct order of question ratings
+               for (int i = 0; i < n; ++i) {
+                cout << matches[i] << " ";
+               }
+                cout << "\n";
+            }
+            
+            int main() {
+                ios_base::sync_with_stdio(false); cin.tie(NULL);
+                int t;
+                cin >> t;
+                while (t--) {
+                    solve();
+                }
+                return 0;
+            }
+
+        </code></pre>
+    </div>
+    <script src="./prism.js"></script>
+</html>

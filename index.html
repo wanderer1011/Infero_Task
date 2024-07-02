@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infero Task</title>
+    <link rel="stylesheet" href="./infero.css">
+</head>
+<body>
+    <h1 class="heading">Infero Task</h1>
+
+    <h2 class="sub-heading">Problem Statement</h2>
+    <p class="content">As the head of Infero, you are responsible for managing the selection process for core positions in the club. Each applicant is required to submit a Codeforces handle and a question of their own creation. There is an online tool that accurately rates the difficulty of any question.
+         An applicant can only submit a question if their rating is greater than or equal to the rating of the question. However, a hacker has tampered with the Google form data and jumbled the questions among the applicants. To protect Infero's reputation, you must develop an algorithm to correctly match 
+         each question to its rightful applicant.
+    </p>
+    <h2 class="sub-heading">Input</h2>
+    <p class="INPUT">
+        The first line contains a single integer <em>t</em> — the number of test cases.
+        <br>The first line of each test case contains a single integer <em>n</em>  — the number of applicants.
+        <br>The second line of each test case contains n integers <em>a</em><sub>1</sub>,<em>a</em><sub>2</sub>,…,<em>a</em><sub>n</sub>  — the ratings of applicants. 
+        <br>The third line  of each test case contains n integers <em>r</em><sub>1</sub>,<em>r</em><sub>2</sub>,…,<em>r</em><sub>n</sub>  — the ratings of the applicant's questions in jumbled order.
+    </p>
+    <h2 class="sub-heading">Output</h2>
+    <p class="OUTPUT">For each test case, output a single line containing n integers — the correct order of the questions.</p>
+    <div class="sample-test">
+        <h2>Example</h2>
+        <div class="input">
+            <div class="title">Input</div>
+            <div class="cases">
+            <div class="test-example-line test-example-line-even test-example-line-0">4</div>
+            <div class="test-example-line test-example-line-odd test-example-line-1">3</div>
+            <div class="test-example-line test-example-line-odd test-example-line-1">100 50 600</div>
+            <div class="test-example-line test-example-line-odd test-example-line-1">43 160 22</div>
+            <div class="test-example-line test-example-line-even test-example-line-2">4</div>
+            <div class="test-example-line test-example-line-even test-example-line-2">20 54 68 11</div>
+            <div class="test-example-line test-example-line-even test-example-line-2">2 16 58 25</div>
+            <div class="test-example-line test-example-line-odd test-example-line-3">2</div>
+            <div class="test-example-line test-example-line-odd test-example-line-3">1005 90</div>
+            <div class="test-example-line test-example-line-odd test-example-line-3">10 340</div>
+            <div class="test-example-line test-example-line-even test-example-line-4">10</div>
+            <div class="test-example-line test-example-line-even test-example-line-4">1 2 3 4 5 6 7 8 9 420</div>
+            <div class="test-example-line test-example-line-even test-example-line-4">343 9 5 6 7 4 2 1 3 8</div>
+            </div>
+        </div>
+        <div class="output">
+            <div class="title">Output</div>
+            <div class="cases">
+                <div class="test-example-line test-example-line-even test-example-line-0">22 43 160</div>
+                <div class="test-example-line test-example-line-odd test-example-line-1">16 25 58 2</div>
+                <div class="test-example-line test-example-line-even test-example-line-2">340 10</div>
+                <div class="test-example-line test-example-line-odd test-example-line-3">1 2 3 4 5 6 7 8 9 320</div>
+            </div>
+        </div>
+    </div>
+    <p style="font-size: large;">Check out the solution <a href="./solution.html">here</a></p>    
+</body>
+</html>
